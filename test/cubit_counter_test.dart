@@ -15,7 +15,7 @@ void main() {
       'emits [1] when increment is called',
       build: () => CounterCubit(),
       act: (bloc) => bloc.increment(),
-      expect: [CounterCubitIncreased(action: 'Increment', count: 1)],
+      expect: [CounterCubitIncreased(dozcount: 'Increment', singcount: 1)],
     );
 
     blocTest(
@@ -26,8 +26,8 @@ void main() {
         ..increment()
         ..decrement(),
       expect: [
-        CounterCubitIncreased(action: 'Increment', count: 1),
-        CounterCubitIncreased(action: 'Increment', count: 2),
+        CounterCubitIncreased(dozcount: 'Increment', singcount: 1),
+        CounterCubitIncreased(dozcount: 'Increment', singcount: 2),
         CounterCubitDecreased(action: 'Decrement', count: 1),
       ],
     );

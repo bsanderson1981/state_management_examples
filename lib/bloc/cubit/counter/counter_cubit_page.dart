@@ -14,17 +14,17 @@ class CounterCubitPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text('Dozen Count: ${state.action}',
+              Text('Dozen Count: ${state.dozcount}',
                 style: Theme.of(context).textTheme.headline2,
                 textAlign: TextAlign.center,
               ),
-              Text('Single Count: ${state.action}',
+              Text('Single Count: ${state.singcount}',
                 style: Theme.of(context).textTheme.headline2,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 8),
               Text(
-                'Total Bagels: ${state.count}',
+                'Total Bagels: ${state.totalbagels}',
                 style: Theme.of(context).textTheme.headline3.copyWith(
                       color: Colors.black,
                     ),

@@ -3,34 +3,36 @@ import 'package:flutter/foundation.dart';
 
 @immutable
 abstract class CounterCubitState extends Equatable {
-  final int action;
-  final int count;
-  final int single;
+  final int dozcount;
+  final int singcount;
+  final int totalbagels;
 
-  const CounterCubitState({this.action, this.count, this.single});
+  const CounterCubitState({this.dozcount, this.singcount, this.totalbagels});
 
   @override
   List<Object> get props => [
-        action,
-        count,
-        single,
+        dozcount,
+        singcount,
+        totalbagels,
       ];
 }
 
 class CounterCubitInitial extends CounterCubitState {
-  const CounterCubitInitial({int action, int count, int single})
-      : super(action: action, count: count, single: single);
+  const CounterCubitInitial({int dozcount, int singcount, int totalbagels})
+      : super(dozcount: dozcount, singcount: singcount, totalbagels: totalbagels);
 }
 
 class CounterCubitIncreased extends CounterCubitState {
-  const CounterCubitIncreased({int action, int count, int single})
-      : super(action: action, count: count, single: single);
+  const CounterCubitIncreased({int dozcount, int singcount, int totalbagels})
+      : super(dozcount: dozcount, singcount: singcount, totalbagels: totalbagels);
 }
 
 class CounterCubitDecreased extends CounterCubitState {
-  const CounterCubitDecreased({int action, int count, int single})
-      : super(action: action, count: count , single: single);
+  const CounterCubitDecreased({int dozcount, int singcount, int totalbagels})
+      : super(dozcount: dozcount, singcount: singcount, totalbagels: totalbagels);
 }
+
+
 
 // Without Equitable tests will fail
 // @immutable
